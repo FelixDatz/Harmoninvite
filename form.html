@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Form Absensi Rapat — Harmonispace · Edufest" />
+  <title>Harmoninvite🤝Konfirmasi Kehadiran</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="page-form">
+
+  <!-- Subtle background blobs (lighter version) -->
+  <div class="blob blob--form-1" aria-hidden="true"></div>
+  <div class="blob blob--form-2" aria-hidden="true"></div>
+
+  <main class="form-wrapper">
+    <div class="form-card">
+
+      <!-- BACK LINK -->
+      <a href="index.html" class="back-link" aria-label="Kembali ke halaman undangan">
+        Kembali
+      </a>
+
+      <!-- HEADER -->
+      <header class="form-card__header">
+        <!-- <span class="form-header-badge">📋 Absensi Rapat</span>-->
+        <h1 class="form-card__title">Konfirmasi<br /><em>Kehadiranmu</em></h1>
+        <p class="form-card__sub">
+          Yuk yukk isi yaaawww
+        </p>
+      </header>
+
+      <!-- PROGRESS BAR (decorative, fills on input) -->
+      <div class="progress-track" aria-hidden="true">
+        <div class="progress-fill" id="progressFill"></div>
+      </div>
+
+      <!-- FORM -->
+      <form id="absensiForm" class="absensi-form" novalidate>
+
+        <!-- NAMA -->
+        <div class="fg" id="fg-nama">
+          <label class="fg__label" for="nama">
+            Nama Lengkap <span class="req" aria-hidden="true">*</span>
+          </label>
+          <input
+            class="fg__input"
+            type="text"
+            id="nama"
+            name="nama"
+            placeholder="Nama lengkapmu di sini..."
+            required
+            autocomplete="name"
+          />
+          <span class="fg__error" id="nama-error" role="alert"></span>
+        </div>
+
+        <!-- DIVISI -->
+        <div class="fg" id="fg-divisi">
+          <label class="fg__label" for="divisi">
+            Asal Divisi <span class="req" aria-hidden="true">*</span>
+          </label>
+          <div class="select-wrap">
+            <select class="fg__input fg__select" id="divisi" name="divisi" required>
+              <option value="" disabled selected>— Pilih divisimu —</option>
+              <!-- ✏️ Tambah / hapus divisi sesuai kebutuhan -->
+              <option value="Harmonisasi">Harmonisasi💛</option>
+              <option value="Acara">Acara</option>
+              <option value="Hubungan Luar (Hublog)">Humas</option>
+              <option value="Keamanan">Keamanan</option>
+              <option value="Konsumsi">Konsumsi</option>
+              <option value="Dekorasi">Dekorasi</option>
+              <option value="Dokumentasi">Media</option>
+              <option value="Perlengkapan">Perlengkapan</option>
+              <option value="Publikasi & Media">K3</option>
+              <option value="Sponsorship">Sponsorship</option>
+              <option value="Orher">Other</option>
+              <option value="-">-</option>
+            </select>
+            <span class="select-wrap__arrow" aria-hidden="true">▾</span>
+          </div>
+          <span class="fg__error" id="divisi-error" role="alert"></span>
+        </div>
+
+        <!-- STATUS KEHADIRAN -->
+        <div class="fg" id="fg-kehadiran">
+          <p class="fg__label">
+            Status Kehadiran <span class="req" aria-hidden="true">*</span>
+          </p>
+          <div class="radio-row" role="radiogroup">
+
+            <label class="radio-tile">
+              <input type="radio" name="kehadiran" value="Hadir" id="radio-hadir" required />
+              <span class="radio-tile__face">
+                <span class="radio-tile__emoji"></span>
+                <span class="radio-tile__word">Hadir</span>
+              </span>
+            </label>
+
+            <label class="radio-tile">
+              <input type="radio" name="kehadiran" value="Tidak Hadir" id="radio-tidak-hadir" />
+              <span class="radio-tile__face">
+                <span class="radio-tile__emoji"></span>
+                <span class="radio-tile__word">Tidak Hadir</span>
+              </span>
+            </label>
+
+          </div>
+          <span class="fg__error" id="kehadiran-error" role="alert"></span>
+        </div>
+
+        <!-- ALASAN (conditional) -->
+        <div class="fg fg--alasan" id="alasan-wrapper" aria-live="polite" hidden>
+          <label class="fg__label" for="alasan">
+            Alasan Ketidakhadiran <span class="req" aria-hidden="true">*</span>
+          </label>
+          <textarea
+            class="fg__input fg__textarea"
+            id="alasan"
+            name="alasan"
+            placeholder="Hei heii, kenapa ga hadir sii, padh seruuu bangettt loow"
+            rows="4"
+          ></textarea>
+          <span class="fg__error" id="alasan-error" role="alert"></span>
+        </div>
+
+        <!-- SUBMIT -->
+        <button class="btn-kirim" type="submit" id="submitBtn">
+          <span class="btn-kirim__text">Kirim Konfirmasi</span>
+          <span class="btn-kirim__loading" aria-hidden="true">
+            <span class="spinner"></span> Mengirim...
+          </span>
+        </button>
+
+      </form>
+
+      <!-- FOOTER -->
+      <footer class="form-card__footer">
+        <p>DMade by <strong>Harmonisasinng💛</strong></p>
+        <p class="form-card__footer-sub">FelixDatz</p>
+      </footer>
+
+    </div><!-- /form-card -->
+  </main>
+
+  <!-- SUCCESS MODAL -->
+  <div class="modal-overlay" id="modalOverlay" role="dialog" aria-modal="true" aria-labelledby="modalTitle" hidden>
+    <div class="modal">
+      <div class="modal__emoji" aria-hidden="true"></div>
+      <h2 class="modal__title" id="modalTitle">Makasii banyakk yaah</h2>
+      <p class="modal__body">
+        Konfirmasi kehadiranmu sudah tercatat di<br />
+        <strong>Harmoninvite🤍</strong>
+      </p>
+      <div class="modal__actions">
+        <button class="modal__btn" id="modalClose">Tutup</button>
+        <a href="index.html" class="modal__btn modal__btn--ghost">← Kembali ke Undangan</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ERROR MODAL -->
+  <div class="modal-overlay" id="errorOverlay" role="dialog" aria-modal="true" aria-labelledby="errorTitle" hidden>
+    <div class="modal modal--error">
+      <div class="modal__emoji" aria-hidden="true"></div>
+      <h2 class="modal__title" id="errorTitle">Ups, ada kendala!</h2>
+      <p class="modal__body" id="errorMessage">
+        Konfirmasimu gagal terkirim. Coba lagi dalam beberapa saat ya!
+      </p>
+      <div class="modal__actions">
+        <button class="modal__btn modal__btn--err" id="errorClose">Coba Lagi</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
