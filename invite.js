@@ -9,7 +9,7 @@
  *            After MAX_NO clicks: "No" vanishes, "Yes" fills screen
  * ============================================================ */
 
-const MAX_NO      = 5;       // how many times "No" can be clicked
+const MAX_NO      = 4;       // how many times "No" can be clicked
 let   noCount     = 0;       // current No click count
 
 const btnYes      = document.getElementById('btnYes');
@@ -17,7 +17,6 @@ const btnNo       = document.getElementById('btnNo');
 const btnNoText   = document.getElementById('btnNoText');
 const rsvpHint    = document.getElementById('rsvpHint');
 const guiltMsg    = document.getElementById('guiltMsg');
-const takeover    = document.getElementById('takeover');
 const confettiCvs = document.getElementById('confettiCanvas');
 
 // Guilt messages shown progressively
@@ -58,7 +57,6 @@ function handleNo() {
     btnYes.style.transform    = `scale(${ys})`;
     btnYes.style.borderRadius = '18px';
     btnYes.style.padding      = '20px 48px';
-    rsvpHint.textContent      = "There's really only one option now. 😌";
     guiltMsg.textContent      = "✨ Yes. That's it. That's the button.";
     btnNo.hidden = true;   // fully hide the No button
   } else {

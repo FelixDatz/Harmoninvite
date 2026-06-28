@@ -175,6 +175,14 @@ form.addEventListener('submit', async e => {
 
     setLoading(false);
     progressFill.style.width = '100%'; // complete the bar
+
+    // Set dynamic link to card page with user's name as URL param
+    const submittedName = data.nama.trim();
+    const cardLink = document.getElementById('btnLihatKartu');
+    if (cardLink) {
+      cardLink.href = 'card.html?nama=' + encodeURIComponent(submittedName);
+    }
+
     form.reset();
     alasanWrapper.hidden  = true;
     alasanInput.required  = false;

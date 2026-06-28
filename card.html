@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Kartu Undangan Pribadi — Harmonispace · Edufest" />
+  <title>Kartu Undanganmu</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,600&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="card.css" />
+</head>
+
+<body class="page-card">
+
+  <!-- Background blobs (same mocha vibe as index) -->
+  <div class="blob blob--1" aria-hidden="true"></div>
+  <div class="blob blob--2" aria-hidden="true"></div>
+  <div class="blob blob--3" aria-hidden="true"></div>
+
+  <main class="card-page-wrapper">
+
+    <!-- TOP NAV -->
+    <nav class="card-nav">
+      <a href="index.html" class="card-nav__back">←Undangan</a>
+      <span class="card-nav__brand">Harmoninvite🤝</span>
+      <a href="form.html" class="card-nav__form">Form→</a>
+    </nav>
+
+    <!-- PAGE TITLE -->
+    <div class="card-page-intro">
+      <p class="card-page-intro__eye"></p>
+      <h1 class="card-page-intro__title">Kartu Undangan<br /><em>Personalmu</em></h1>
+      <p class="card-page-intro__sub">
+        Simpan dan bagikan ke grup WhatsApp panitia!
+      </p>
+    </div>
+
+    <!-- ═══════════════════════════════════════
+         THE CARD  — this element gets captured
+         ═══════════════════════════════════════ -->
+    <div class="inv-card" id="invCard">
+
+      <!-- Top decorative strip -->
+      <div class="inv-card__strip">
+        <span class="inv-card__strip-dot"></span>
+        <span class="inv-card__strip-line"></span>
+        <span class="inv-card__strip-text">Special invitation</span>
+        <span class="inv-card__strip-line"></span>
+        <span class="inv-card__strip-dot"></span>
+      </div>
+
+      <!-- Seal -->
+      <div class="inv-card__seal" aria-hidden="true">
+        <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+          <!-- burst spikes -->
+          <g fill="#ffde59" opacity="0.20">
+            <rect x="57" y="2" width="6" height="15" rx="3" transform="rotate(0 60 60)"/>
+            <rect x="57" y="2" width="6" height="15" rx="3" transform="rotate(22.5 60 60)"/>
+            <rect x="57" y="2" width="6" height="15" rx="3" transform="rotate(45 60 60)"/>
+            <rect x="57" y="2" width="6" height="15" rx="3" transform="rotate(67.5 60 60)"/>
+            <rect x="57" y="2" width="6" height="15" rx="3" transform="rotate(90 60 60)"/>
+            <rect x="57" y="2" width="6" height="15" rx="3" transform="rotate(112.5 60 60)"/>
+            <rect x="57" y="2" width="6" height="15" rx="3" transform="rotate(135 60 60)"/>
+            <rect x="57" y="2" width="6" height="15" rx="3" transform="rotate(157.5 60 60)"/>
+            <rect x="57" y="2" width="6" height="15" rx="3" transform="rotate(180 60 60)"/>
+            <rect x="57" y="2" width="6" height="15" rx="3" transform="rotate(202.5 60 60)"/>
+            <rect x="57" y="2" width="6" height="15" rx="3" transform="rotate(225 60 60)"/>
+            <rect x="57" y="2" width="6" height="15" rx="3" transform="rotate(247.5 60 60)"/>
+            <rect x="57" y="2" width="6" height="15" rx="3" transform="rotate(270 60 60)"/>
+            <rect x="57" y="2" width="6" height="15" rx="3" transform="rotate(292.5 60 60)"/>
+            <rect x="57" y="2" width="6" height="15" rx="3" transform="rotate(315 60 60)"/>
+            <rect x="57" y="2" width="6" height="15" rx="3" transform="rotate(337.5 60 60)"/>
+          </g>
+          <circle cx="60" cy="60" r="44" fill="#745f5d"/>
+          <circle cx="60" cy="60" r="38" fill="none" stroke="#ffde59" stroke-width="1" opacity="0.35"/>
+          <text x="60" y="73" text-anchor="middle" font-size="34">🤝</text>
+        </svg>
+      </div>
+
+      <!-- Brand -->
+      <p class="inv-card__brand">Harmoninvite</p>
+      <p class="inv-card__sub-brand">harmonisasi division</p>
+
+      <!-- Ornament -->
+      <div class="inv-card__orn" aria-hidden="true"></div>
+
+      <!-- Personal section -->
+      <p class="inv-card__presents">This card is exclusively presented to</p>
+      <h2 class="inv-card__name" id="cardName">— Nama Kamu —</h2>
+
+      <!-- Tagline -->
+      <p class="inv-card__tagline">
+        You are officially invited to attend<br />
+        the <em>Harmoninvite</em> coordination meeting.
+      </p>
+
+      <!-- Ornament -->
+      <div class="inv-card__orn" aria-hidden="true">— ✦ —</div>
+
+      <!-- Event details inside card -->
+      <div class="inv-card__details">
+        <div class="inv-card__detail-row">
+          <span class="inv-card__detail-icon">📅</span>
+          <div>
+            <span class="inv-card__detail-label">Date</span>
+            <!-- ✏️ Ganti sesuai tanggal rapat -->
+            <span class="inv-card__detail-val">Monday, 29th of June 2026</span>
+          </div>
+        </div>
+        <div class="inv-card__detail-row">
+          <span class="inv-card__detail-icon">🕐</span>
+          <div>
+            <span class="inv-card__detail-label">Time</span>
+            <!-- ✏️ Ganti sesuai jam rapat -->
+            <span class="inv-card__detail-val">07.PM –  End</span>
+          </div>
+        </div>
+        <div class="inv-card__detail-row">
+          <span class="inv-card__detail-icon">📍</span>
+          <div>
+            <span class="inv-card__detail-label">Venue</span>
+            <!-- ✏️ Ganti sesuai tempat rapat -->
+            <span class="inv-card__detail-val">Ongoing by Felix</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom strip -->
+      <div class="inv-card__footer-strip">
+        <span class="inv-card__footer-strip-text">Harmonisasinng</span>
+      </div>
+
+    </div><!-- /inv-card -->
+
+    <!-- ACTION BUTTONS (below card, NOT captured in screenshot) -->
+    <div class="card-actions" id="cardActions">
+      <button class="card-action-btn card-action-btn--primary" id="btnDownload">
+        <span class="card-action-btn__icon"></span>
+        <span>Download Kartu</span>
+      </button>
+      <button class="card-action-btn card-action-btn--ghost" id="btnShare">
+        <span class="card-action-btn__icon"></span>
+        <span>Bagikan</span>
+      </button>
+    </div>
+
+    <!-- Download hint -->
+    <p class="card-hint" id="cardHint">
+      Gambar akan tersimpan ke galeri / folder Downloads kamu
+    </p>
+
+    <!-- Loading state for download -->
+    <div class="card-dl-loading" id="dlLoading" hidden>
+      <span class="spinner-mocha"></span>
+      <span>Menyiapkan gambar...</span>
+    </div>
+
+  </main>
+
+  <!-- html2canvas — renders DOM to canvas for download -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"
+          integrity="sha512-BNaRQnYJYiPSqHHDb58B0yaPfCu+Wgds8Gp/gU33kqBtgNS4tSPHuGibyoeqMV/TJlSKda6FXzoEyYGjTe+vXA=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="card.js"></script>
+</body>
+</html>
