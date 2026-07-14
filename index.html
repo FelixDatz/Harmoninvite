@@ -13,15 +13,12 @@
 
 <body class="page-invite">
 
-  <!-- ── ANIMATED BACKGROUND BLOBS ── -->
   <div class="blob blob--1" aria-hidden="true"></div>
   <div class="blob blob--2" aria-hidden="true"></div>
   <div class="blob blob--3" aria-hidden="true"></div>
 
-  <!-- ── CONFETTI CANVAS (injected by JS) ── -->
   <canvas id="confettiCanvas" aria-hidden="true"></canvas>
 
-  <!-- ── YES TAKEOVER OVERLAY ── -->
   <div class="takeover" id="takeover" aria-hidden="true">
     <div class="takeover__inner">
       <span class="takeover__emoji">🎉</span>
@@ -29,17 +26,13 @@
     </div>
   </div>
 
-  <!-- ── PAGE WRAPPER ── -->
   <main class="invite-wrapper">
     <div class="invite-card" role="main">
 
-      <!-- SEAL -->
       <div class="seal" aria-hidden="true">
         <svg viewBox="0 0 140 140" xmlns="http://www.w3.org/2000/svg" class="seal__svg">
-          <!-- Outer glow rings -->
           <circle cx="70" cy="70" r="66" fill="none" stroke="#ffde59" stroke-width="1.5" opacity="0.3"/>
           <circle cx="70" cy="70" r="58" fill="none" stroke="#ffde59" stroke-width="0.8" opacity="0.2"/>
-          <!-- Spike burst -->
           <g fill="#ffde59" opacity="0.25">
             <rect x="67" y="2" width="6" height="16" rx="3" transform="rotate(0 70 70)"/>
             <rect x="67" y="2" width="6" height="16" rx="3" transform="rotate(22.5 70 70)"/>
@@ -58,18 +51,14 @@
             <rect x="67" y="2" width="6" height="16" rx="3" transform="rotate(315 70 70)"/>
             <rect x="67" y="2" width="6" height="16" rx="3" transform="rotate(337.5 70 70)"/>
           </g>
-          <!-- Main circle -->
           <circle cx="70" cy="70" r="48" fill="#745f5d"/>
           <circle cx="70" cy="70" r="42" fill="none" stroke="#ffde59" stroke-width="1" opacity="0.4"/>
-          <!-- Emoji -->
           <text x="70" y="82" text-anchor="middle" font-size="38">🤝</text>
         </svg>
       </div>
 
-      <!-- MAIN HEADING -->
       <h1 class="invite-title">You're <em>invited.</em></h1>
 
-      <!-- OPENING TEXT -->
       <p class="invite-greeting">
         Hello, <strong>Edufest 2026 Committee!</strong><br />
         Congratulations!<br />
@@ -77,12 +66,10 @@
         to the <strong>Edufest committee meeting</strong>
       </p>
 
-      <!-- DIVIDER -->
       <div class="ornament-divider" aria-hidden="true">
         <span>— ✦ —</span>
       </div>
 
-      <!-- EVENT DETAILS -->
       <section class="event-grid" aria-label="Event Details">
         <div class="event-chip">
           <span class="event-chip__icon">📅</span>
@@ -102,7 +89,7 @@
           <span class="event-chip__icon">📍</span>
           <div>
             <span class="event-chip__label">Venue</span>
-            <span class="event-chip__val">Menyusul</span>
+            <span class="event-chip__val">Aula Lantai 4 JPTK Kampus V FKIP UNS</span>
           </div>
         </div>
         <div class="event-chip event-chip--full">
@@ -114,22 +101,18 @@
         </div>
       </section>
 
-      <!-- DIVIDER -->
       <div class="ornament-divider" aria-hidden="true">
         <span>— ✦ —</span>
       </div>
 
-      <!-- RSVP GIMMICK -->
       <section class="rsvp-section" aria-label="RSVP">
         <p class="rsvp-question">So... will you attend?</p>
         <p class="rsvp-hint" id="rsvpHint">Think carefully before you answer.</p>
 
         <div class="rsvp-btns" id="rsvpBtns">
-          <!-- YES -->
           <button class="btn-yes" id="btnYes" onclick="handleYes()">
             <span>Gas bangett!</span>
           </button>
-          <!-- NO -->
           <button class="btn-no" id="btnNo" onclick="handleNo()">
             <span id="btnNoText">another option</span>
           </button>
@@ -139,14 +122,12 @@
         </p>
       </section>
 
-      <!-- FOOTER -->
       <footer class="invite-footer">
         <p>Made by <strong>Edufest 2026💛</strong></p>
         <p class="invite-footer__sub">FelixDatz</p>
       </footer>
 
-    </div><!-- /invite-card -->
-  </main>
+    </div></main>
 
   <script src="invite.js"></script>
 </body>
